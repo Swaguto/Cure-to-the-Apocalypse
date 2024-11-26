@@ -4,10 +4,9 @@
  * methods were worked on together, this is main file that starts everything
  */
 
-import javax.swing.*; // for dialog boxes
-import java.util.*; // date + scanner
-import java.util.concurrent.TimeUnit; // timing
-import java.awt.Component; //component class
+import java.util.*; // for dialog boxes
+import java.util.concurrent.TimeUnit; // date + scanner
+import javax.swing.*; // timing
 
 public class primary {
     static Date now; static Date end;
@@ -24,7 +23,7 @@ public class primary {
         now = new Date();
         sec1 = now.getSeconds();
         min1 = now.getMinutes();
-        start();
+        conclusion();
     }
 
     static void printSlow(String word) { // printslow function
@@ -109,14 +108,14 @@ public class primary {
         int sec2 = end.getSeconds();
         int min2 = end.getMinutes();
         printSlow("TOTAL TIME TAKEN TO FINISH: " + (min2-min1) + " MINUTES, " + (sec2-sec1) + " SECONDS");
-        // ADD IT HERE
         if (playAgain()) {
             charStats.resetStats();
             start();
         } else {
             ImageIcon endIcon = new ImageIcon(primary.class.getResource("/ending.png"));
             JOptionPane.showMessageDialog(null, "Thanks for playing Cure to the Apocalypse. Hope you enjoyed.", "Cure to the Apocalypse", JOptionPane.INFORMATION_MESSAGE, endIcon);
-            timeDelay(2);
+            ratingDrop.start(); // ask for user rating
+            timeDelay(15);
             System.exit(0);
         }
     }
@@ -154,43 +153,4 @@ public class primary {
             e.printStackTrace();
         }
     }
-
-    //      public static void rating () { 
-    //      JFrame frame = new JFrame("Game rating");
-    //      frame.setVisible(true);
-    //      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //      frame.setSize(500, 500);
-    //      frame.setLocation(430, 100);
-
-    //      JPanel panel = new JPanel();
-    //      panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); // added code
-
-    //      frame.add(panel);
-
-    //      JLabel lbl = new JLabel("Select a rating from one to 5");
-    //      lbl.setAlignmentX(Component.CENTER_ALIGNMENT);
-    //      //lbl.setVisible(true); // Not needed
-
-    //      panel.add(lbl);
-
-    //      String[] choices = { "1", "2", "3", "4",
-    //                          "5" };
-
-    //      final JComboBox<String> cb = new JComboBox<String>(choices);
-
-    //      cb.setMaximumSize(cb.getPreferredSize()); // added code
-    //      cb.setAlignmentX(Component.CENTER_ALIGNMENT);// added code
-    //      //cb.setVisible(true); // Not needed
-    //     panel.add(cb);
-
-    //      JButton btn = new JButton("OK");
-    //      btn.setAlignmentX(Component.CENTER_ALIGNMENT); // added code
-    //      panel.add(btn);
-
-    //      if (btn.isSelected()) {
-    //          frame.dispose();
-             
-    //      }
-        
-    //  }
 }
