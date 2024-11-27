@@ -258,7 +258,7 @@ public class interiorLab {
             primary.printSlow("You have already transcribed & replicated the sample."); primary.timeDelay(1);
             primary.printSlow("You seem like a chronic time waster. Get moving."); primary.timeDelay(1);
         }
-        System.out.print("You can go to G or I. Where would you like to move? (d/f/g/show-map) "); String move = "";
+        System.out.print("You can go to G or I. Where would you like to move? (g/i/show-map) "); String move = "";
         while (!move.equalsIgnoreCase("i") && !move.equalsIgnoreCase("g")) {
             move = input.nextLine();
             if (move.equalsIgnoreCase("i")) {
@@ -296,7 +296,7 @@ public class interiorLab {
                 primary.conclusion(); // ends the game, only possible after user returns here from task 3
             }
         }
-        System.out.print("You can go to G or H. Where would you like to move? (d/f/g/show-map) "); String move = "";
+        System.out.print("You can go to G or H. Where would you like to move? (g/h/show-map) "); String move = "";
         while (!move.equalsIgnoreCase("h") && !move.equalsIgnoreCase("g")) {
             move = input.nextLine();
             if (move.equalsIgnoreCase("h")) {
