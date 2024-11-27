@@ -137,7 +137,7 @@ public class primary {
         int choice = JOptionPane.showConfirmDialog(null, "Do you want to restart?", "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION); // dialog option
         if (choice == JOptionPane.YES_OPTION) {
             // If the user chose 'Yes', show a message indicating restart
-            JOptionPane.showMessageDialog(null, "restarting...");
+            JOptionPane.showMessageDialog(null, "Restarting...");
             return true;
         } else {
             // If the user chose 'No', 'Cancel' or closed the dialog, show a message indicating the operation is canceled
