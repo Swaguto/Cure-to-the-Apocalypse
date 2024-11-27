@@ -23,7 +23,7 @@ public class primary {
         now = new Date();
         sec1 = now.getSeconds();
         min1 = now.getMinutes();
-        conclusion();
+        start();
     }
 
     static void printSlow(String word) { // printslow function
