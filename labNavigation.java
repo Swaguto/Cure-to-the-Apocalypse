@@ -1,3 +1,6 @@
+/*
+ * aksharn's code, task 1
+ */
 import java.util.Scanner;
 
 public class labNavigation {
@@ -6,9 +9,9 @@ public class labNavigation {
         new labNavigation();
     }
 
-    public labNavigation() { // FOR DEBUGGING ONLY!!
-        start();
-    } 
+    // public labNavigation() { // FOR DEBUGGING ONLY!!
+    //     start();
+    // } 
 
     static Scanner input = new Scanner(System.in);
     
