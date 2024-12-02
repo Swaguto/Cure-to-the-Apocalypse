@@ -1,4 +1,6 @@
-
+/* 
+* music module; adapted by rohith and bugs fixed by harsimran
+*/
 import java.io.File;
 import javax.sound.sampled.*;
 import javax.swing.JOptionPane;
